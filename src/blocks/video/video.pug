@@ -1,0 +1,22 @@
+.video
+	p.video__title Все еще сомневаетесь?
+	
+	p.video__text.text
+		| Смотрите видеопрезентацию и скорее за билетами, пока
+		| они не подорожали в очередной раз!
+
+	.video__container
+		video.video__player(width='800', height='450')
+			source(src='videos/sedona.mp4', type='video/mp4')
+
+		.video__controls
+			.video__playing
+				.video__seek
+					input.video__seekbar(type='range', value='0')
+				.video__btns
+					button.video__btn.video__btn--play.video__btn--play--desktop(type='button')
+					button.video__btn.video__btn--play.video__btn--play--mobile(type='button')
+					button.video__btn.video__btn--pause.video__btn--pause--desktop(type='button')
+					button.video__btn.video__btn--pause.video__btn--pause--mobile(type='button')
+					button.video__btn.video__btn--full.video__btn--full--mobile(type='button')
+			button.video__btn.video__btn--full.video__btn--full--desktop(type='button')

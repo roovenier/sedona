@@ -1,0 +1,91 @@
+.review
+	h1.review__title.text.text--title Оставьте свой отзыв
+	
+	p.review__text.text
+		| Помогите нашим отелям стать лучше! оставьте отзыв о них,
+		| а также о посещенных вами достопримечательностях
+		
+	form.review__form(action="", method="post")
+		.review__starting
+			.review__impression
+				p.review__section Ваше общее впечатление:
+				
+				.review__point
+					input.review__radio(id="positive", type="radio", name="impression", value="positive")
+					label(for="positive") Скорее положительное
+					
+				.review__point
+					input.review__radio(id="negative", type="radio", name="impression", value="negative")
+					label(for="negative") Скорее отрицательное
+					
+				.review__point
+					input.review__radio(id="neutrally", type="radio", name="impression", value="neutrally")
+					label(for="neutrally") Затрудняюсь ответить
+			
+			.review__represent
+				p.review__section.review__section--desktop Представьтесь, пожалуйста:
+				p.review__section.review__section--tablet Представьтесь:
+				
+				.review__person
+					.review__point
+						span.text Имя:
+						input.review__input(type="text", name="firstname")
+						
+					.review__point
+						span.text Фамилия:
+						input.review__input(type="text", name="lastname")
+						
+					.review__point
+						span.text Отчество:
+						input.review__input(type="text", name="patronymic")
+						
+		.review__block.review__block--contacts
+			p.review__section.review__section--full Контактная информация:
+			
+			.review__contacts
+				.review__point.review__point--contacts
+					span.review__label.text Телефон:
+					.review__box.review__box--tel
+						p.review__error Ошибка, перепроверьте номер
+						input.review__input.review__input--tel(type="text", name="tel")
+						.review__icon
+							i.review__tel
+					
+				.review__point.review__point--contacts
+					span.review__label.text Электронная почта:
+					.review__box
+						input.review__input.review__input--email(type="text", name="email")
+						.review__icon
+							i.review__mail
+							
+		.review__block.review__block--places
+			p.review__section.review__section--full
+				| Посещенные 
+				| достопримечательности:
+				
+			.review__places
+				.review__place
+					input.review__checkbox(id="bridge", type="checkbox", name="place1", value="bridge")
+					label(for="bridge") Мост Дьявола
+					
+				.review__place
+					input.review__checkbox(id="mountain", type="checkbox", name="place2", value="mountain")
+					label(for="mountain") Гора-Колокол
+					
+				.review__place
+					input.review__checkbox(id="park", type="checkbox", name="place3", value="park")
+					label(for="park") Слайд-парк
+					
+				.review__place
+					input.review__checkbox(id="rocks", type="checkbox", name="place4", value="rocks")
+					label(for="rocks") Красные скалы
+					
+		.review__block.review__block--textarea
+			p.review__section.review__section--full Опишите свои эмоции:
+			
+			textarea.review__textarea(name="description")
+		
+		.review__footer
+			button.btn.btn--review(type="submit") Отправить отзыв
+			
+			p.review__remark.text * — обязательные поля

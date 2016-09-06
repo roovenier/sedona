@@ -1,0 +1,23 @@
+ul.menu
+	li.menu__item
+		a.menu__link(href="/", class=page === "index" ? "menu__link--active" : "") Главная
+		
+		span.menu__close
+			i.menu__close-icon
+	
+	li.menu__item
+		a.menu__link(href="/gallery.html", class=page === "gallery" ? "menu__link--active" : "") Фото и видео
+	
+	li.menu__item.menu__item--logo
+		a.menu__link(href="/")
+			i.menu__logo.menu__logo--desktop
+			
+			i.menu__logo.menu__logo--tablet
+			
+		i.menu__bars
+	
+	li.menu__item
+		a.menu__link(href="/review.html", class=page === "review" ? "menu__link--active" : "") Форма отзыва
+	
+	li.menu__item
+		a.menu__link(href="https://htmlacademy.ru/") HTML Academy

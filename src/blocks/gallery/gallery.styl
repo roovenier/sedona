@@ -1,0 +1,170 @@
+.gallery
+	margin-top 100px
+
+	@media (max-width: $tablet-bp)
+		margin-top 70px
+
+	@media (max-width: $mobile-bp)
+		margin-top 40px
+
+	&__title
+		margin-bottom 26px
+		font-size 30px
+
+		@media (max-width: $mobile-bp)
+			font-size 18px
+
+	&__text
+		margin-bottom 0
+
+		@media (max-width: $mobile-bp)
+			padding 0 15px 30px
+			border-bottom 1px solid #e5e5e5
+
+	&__item
+
+		&--list
+
+			@media (max-width: $tablet-bp)
+				width 50%
+
+			@media (max-width: $mobile-bp)
+				width 100%
+
+		@media (max-width: $mobile-bp)
+			border-bottom 1px solid #e5e5e5
+
+	&__list
+		display flex
+		flex-wrap wrap
+
+		@media (max-width: $tablet-bp)
+			margin 0 auto
+			width 648px
+			overflow hidden
+
+		@media (max-width: 648px)
+			width 100%
+
+		@media (max-width: $mobile-bp)
+			flex-direction column
+
+	&__container
+		position relative
+		height 267px
+
+		@media (max-width: $tablet-bp)
+			width 100%
+			height 347px
+			overflow hidden
+
+		@media (max-width: $mobile-bp)
+			margin 22px auto 0
+			width 280px
+			height 392px
+
+		& img
+
+			@media (max-width: $mobile-bp)
+				height 280px
+
+		&--full
+			margin-top 75px
+			height 400px
+
+			& img
+
+				@media (max-width: $tablet-bp)
+					height 400px
+
+				@media (max-width: $mobile-bp)
+					height 280px
+
+			@media (max-width: $tablet-bp)
+				margin 65px auto 0
+				display flex
+				justify-content center
+				width 648px
+				height 480px
+				overflow hidden
+
+			@media (max-width: 648px)
+				width 100%
+
+			@media (max-width: $mobile-bp)
+				margin-top 22px
+				width 280px
+				height 392px
+
+	&__footer
+		position absolute
+		left 0
+		bottom 0
+		width 100%
+		height 80px
+		display flex
+		justify-content space-between
+		align-items center
+		background-color rgba(0, 0, 0, .3)
+
+		@media (max-width: $tablet-bp)
+			background-color #f2f2f2
+
+		@media (max-width: $mobile-bp)
+			flex-direction column
+			align-items flex-start
+			justify-content flex-start
+			height 112px
+			background-color transparent
+
+	&__info
+		margin-left 20px
+		text-align left
+
+		@media (max-width: $mobile-bp)
+			margin-top 20px
+			margin-left 0
+
+	&__name
+		margin-bottom 6px
+
+		@media (max-width: $tablet-bp)
+			color #000
+
+	&__author
+		margin 0
+		font-size 14px
+		color #fff
+
+		@media (max-width: $tablet-bp)
+			color #000
+
+	&__likes
+		margin-right 20px
+		display flex
+		cursor pointer
+
+		@media (max-width: $mobile-bp)
+			margin-top 10px
+
+	&__thumbup
+		display inline-block
+
+		&--desktop
+			@extend $thumbup
+
+			@media (max-width: $tablet-bp)
+				display none
+
+		&--tablet
+			display none
+			@extend $thumbup_gray
+
+			@media (max-width: $tablet-bp)
+				display block
+
+	&__value
+		margin 3px 0 0 10px
+
+		@media (max-width: $tablet-bp)
+			color #000

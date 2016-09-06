@@ -1,0 +1,92 @@
+.stuff
+	display flex
+
+	@media (max-width: $mobile-bp)
+		margin-bottom 40px
+		flex-direction column
+
+	&__item
+		display flex
+		flex 1
+		flex-direction column
+		align-items center
+		justify-content center
+		height 330px
+
+		@media (max-width: $mobile-bp)
+			margin-top 26px
+			padding 0 20px
+			flex-direction row
+			align-items flex-start
+			justify-content flex-start
+			height auto
+			text-align left
+
+	&__icon
+		margin-bottom 25px
+		display inline-block
+
+		&--house
+
+			&--desktop
+				@extend $house2x
+
+				@media (max-width: $mobile-bp)
+					display none
+
+			&--mobile
+				display none
+				@extend $house
+
+				@media (max-width: $mobile-bp)
+					display block
+					flex 41px 0 0
+
+		&--burger
+
+			&--desktop
+				@extend $burger2x
+
+				@media (max-width: $mobile-bp)
+					display none
+
+			&--mobile
+				display none
+				@extend $burger
+
+				@media (max-width: $mobile-bp)
+					display block
+					flex 42px 0 0
+
+		&--gift
+
+			&--desktop
+				@extend $gift2x
+
+				@media (max-width: $mobile-bp)
+					display none
+
+			&--mobile
+				display none
+				@extend $gift
+
+				@media (max-width: $mobile-bp)
+					display block
+					flex 35px 0 0
+
+	&__title
+		margin-bottom 22px
+
+	&__text
+		margin 0 10px
+
+		@media (max-width: $tablet-bp)
+			margin 0 40px
+
+		@media (max-width: $mobile-bp)
+			margin 0
+
+	&__info
+
+		@media (max-width: $mobile-bp)
+			margin 13px 0 0 13px
