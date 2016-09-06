@@ -72,7 +72,7 @@ gulp.task('icons', function() {
 		.pipe(gulpif(/\.svg$/, gulp.dest('build/icons')))
 });
 
-function runWebpack(watch = false) {
+function runWebpack(watch) {
 	const webpackConfig = {
 		watch,
 		bail: false,
