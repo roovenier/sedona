@@ -4,7 +4,7 @@ $(() => {
 
 	$reviewForm.on('submit', e => {
 		e.preventDefault();
-		
+
 		$reviewError.hide();
 		$('.modal').hide();
 
